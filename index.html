@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="index.css" />
+	<script src="index.js"></script>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	var player = audio({
+		src: 'test.mp3',
+		volume: 1
+	});
+	player.play(function(){
+		console.log(player.duration);
+	});
+	player.on('timeupdate',function(pos){
+		// console.log(pos);
+	});
+
+	/* test pause method * /
+	setTimeout(function(){
+		player.pause();
+		setTimeout(function(){
+			player.play();
+		},2000);
+	},10*1000);
+	//*/
+</script>
