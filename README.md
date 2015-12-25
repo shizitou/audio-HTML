@@ -1,9 +1,8 @@
 # audio-HTML
-  	基于audio标签的声音播放器库
-## 专为移动端设计的audio播放器
-  	基于HTML标签
+  	基于HTML5audio标签的声音播放器库
+  	兼容性测试只考虑了移动端浏览器
 ## 测试兼容: 
-  	UC，搜狗，百度，QQ，原生，360
+  	UC，搜狗，百度，QQ，原生，360，chrome
 ## 兼容平台：
   	android，ios
 ## 兼容声明：
