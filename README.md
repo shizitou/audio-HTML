@@ -11,3 +11,17 @@
 	部分平台浏览器不支持音量的设置
 	部分平台浏览器不支持loadprogress事件
 	尚未进行过PC段的兼容性调试，谨慎使用
+```javascript
+	var player = audio({
+		src: 'xxxxx',
+		volume: 1(0.001-1),
+		pos: 2(秒)
+	});
+	player.play(function(){
+		//触发到这里时,音乐已经开始播放
+		console.log(player.duration);
+	});
+	player.on('timeupdate',function(pos){});
+	player.on('loadprogress',function(pro){});
+	player.on('loaded',function(){});
+```
