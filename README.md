@@ -11,6 +11,7 @@
 	部分平台浏览器不支持音量的设置
 	部分平台浏览器不支持loadprogress事件
 	尚未进行过PC段的兼容性调试，谨慎使用
+## 使用声明
 ```javascript
 	var player = audio({
 		src: 'xxxxx',
@@ -25,3 +26,6 @@
 	player.on('loadprogress',function(pro){});
 	player.on('loaded',function(){});
 ```
+## 特殊声明
+	由于未测试过src切换时产生的兼容性问题，
+	当页面需要使用多个音频文件时，建议对多个audio对象进行管理。
