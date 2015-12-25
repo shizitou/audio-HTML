@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>Document</title>
+<title>Audio-HTML5</title>
 <link rel="stylesheet" href="index.css" />
 <script src="index.js"></script>
 <style>
@@ -66,8 +66,6 @@
 			<div class="loaded js-loaded"><i class="loaded-but"></i></div>
 		</div>
 	</div>
-	<audio id="audio" preload="auto" src="test.mp3" controls="controls"></audio>
-	<div id="debugger"></div>
 </body>
 </html>
 <script>
@@ -85,7 +83,6 @@
 	var loaded = document.querySelector('.js-loaded');
 	var progress = document.querySelector('.js-progress');
 	var processLength = document.querySelector('.js-processView');
-	var debug = document.getElementById('debugger');
 	processLength = parseInt(getComputedStyle(processLength).width);
 
 	var begin = false;
@@ -124,18 +121,4 @@
 	player.on('loaded', function(pro){
 		console.log('#### loaded ####');
 	});
-	/**
-	function initAudio() {
-		var audio5js = new Audio5js({
-			ready: function() {
-				this.load('test.mp3');
-				this.play();
-				this.on('progress', function(load_percent) {
-					debug.innerHTML = load_percent;
-				}, this);
-			}
-		});
-	}
-    startBut.onclick = initAudio;
-    //*/
 </script>
